@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class SearchTestQuery {
     public Object excute(TestQueryDTO.TestQueryRequest testQueryRequest) throws Exception{
-
-        return testQueryRequest;
+        TestQueryDTO.TestQueryResponse resultResponse = TestQueryDTO.TestQueryResponse.builder().test3(testQueryRequest.getTest1()).build();
+        return resultResponse;
     }
 }
